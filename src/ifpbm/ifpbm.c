@@ -51,13 +51,13 @@ BOOL IsSupportedEx(char *filename, char *data)
   Hsp2Rnd* rnd;
   int i;
 
-  /* お約束のシグネチャチェック、なの */
+  /* シグネチャを確認 */
   if(pbmHead->pbType != 0x6270) /* "pb" */
   {
     return FALSE;
   }
 
-  /* マスクタイプのチェック、なの */
+  /* マスクの種別を確認 */
   if(pbmMaskMode < 0 || pbmMaskMode > 2)
   {
     return FALSE;
@@ -67,13 +67,13 @@ BOOL IsSupportedEx(char *filename, char *data)
     rseed = IFPBM_RSEED;
   }
 
-  /* 8ビットカラーのみ対応、なの */
+  /* 8ビットカラーのみ対応 */
   if(pbmHead->pbBitCount != 8)
   {
     return FALSE;
   }
 
-  /* チェックサムの確認、なの */
+  /* チェックサムを確認 */
   pbmActualSum = 0;
   if(pbmMaskMode != 0)
   {
