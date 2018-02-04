@@ -1,5 +1,6 @@
 Susie plugin for Presys games (spiprsys)
 ========================================
+[![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/h9e6u2ugpj1ueume/branch/master?svg=true)](https://ci.appveyor.com/project/gocha/spiruneg/branch/master)
 
 spiprsys は [Presys](http://www.presys.jp/) 製ゲーム向けの Susie プラグインパッケージです。
 
