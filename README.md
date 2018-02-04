@@ -55,4 +55,4 @@ After few months, I have started learning a programming. I wanted to create my o
 Presys, thank you for giving a chance to start my programming life.
 You gave me even a chance to start my reverse-engineering life. Thank you very much.
 
-Hope I will meat your new fun game, someday.
+Hope I will meet your new fun game, someday.
