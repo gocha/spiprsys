@@ -22,7 +22,7 @@ init:
   - git config --global core.autocrlf input
 
 before_build:
-  - 7z a -mx9 src.7z src
+  - 7z a src.zip src
 
 build_script:
   - msbuild src\spiprsys.sln /t:build /p:Configuration=%config%;Platform="%platform%" /m /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll"
@@ -33,8 +33,8 @@ after_build:
   - set package_name=spiprsys-%my_version%-%arch%
   - if not exist bin mkdir bin
   - copy src\%outdir%\ifpbm.spi bin
-  - 7z a -mx9 %package_name%.7z bin src.7z README.md README_ja.md LICENSE
+  - 7z a %package_name%.zip bin src.zip README.md README_ja.md LICENSE
 
 artifacts:
-  - path: $(package_name).7z
+  - path: $(package_name).zip
     name: $(arch)
